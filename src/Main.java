@@ -23,7 +23,7 @@ public class Main {
                     Deposit(newAccount);
                     break;
                 case 3:
-
+                    Withdraw(newAccount);
                     break;
                 case 4:
                     break;
@@ -49,8 +49,17 @@ public class Main {
     public static void Deposit(Account account){
         System.out.print("\nEnter the amount you want to deposit: ");
         double deposit = input.nextDouble();
+        input.nextLine();
 
         account.deposit(deposit);
         Bank.trackTransaction("The deposit transaction was completed successfully.");
     }
+    public static void Withdraw(Account account){
+        System.out.print("\nEnter the amount you want to withdraw: ");
+        double withdraw = input.nextDouble();
+        input.nextLine();
+
+        account.withdraw(withdraw);
+    }
+
 }

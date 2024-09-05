@@ -18,9 +18,11 @@ public class Account {
     public void withdraw(double amount){
         if (this.balance - amount < 0){
             System.out.println("\nYour balance is insufficient.\n");
+            Bank.trackTransaction("Withdrawal transaction canceled: Insufficient balance.");
         }
         else {
             this.balance -= amount;
+            Bank.trackTransaction("Withdrawal transaction was completed successfully.");
         }
         viewBalance();
     }
