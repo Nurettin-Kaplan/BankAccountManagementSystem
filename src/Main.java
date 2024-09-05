@@ -40,14 +40,13 @@ public class Main {
     public static void Menu(){
         System.out.println("\n\n1- Balance Inquiry");
         System.out.println("2- Deposit Money");
-        System.out.println("3-Withdraw Money");
-        System.out.println("4-View bank information");
-        System.out.println("5-View transaction history");
+        System.out.println("3- Withdraw Money");
+        System.out.println("4- View bank information");
+        System.out.println("5- View transaction history");
         System.out.print("Enter your choice: ");
         choice = input.nextInt();
         input.nextLine();
     }
-
     public static void Deposit(Account account){
         System.out.print("\nEnter the amount you want to deposit: ");
         double deposit = input.nextDouble();
@@ -64,8 +63,10 @@ public class Main {
         account.withdraw(withdraw);
     }
     public static void ViewTransaction(){
+        System.out.println("\n"+"*".repeat(50));
         for(String exp : Bank.transactionHistory){
-            System.out.println(exp);
+            System.out.println("\n" + exp);
         }
+        System.out.println("\n"+"*".repeat(50));
     }
 }

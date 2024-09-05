@@ -11,6 +11,7 @@ public class Account {
         this.owner = owner;
         this.balance = balance;
     }
+
     public void deposit(double amount){
         this.balance += amount;
         viewBalance();
@@ -27,7 +28,7 @@ public class Account {
         viewBalance();
     }
     public void viewBalance(){
-        System.out.println("*".repeat(50));
+        System.out.println("\n" + "*".repeat(50));
         System.out.println("\nBalance: " + this.balance + "\n");
         System.out.println("*".repeat(50));
     }

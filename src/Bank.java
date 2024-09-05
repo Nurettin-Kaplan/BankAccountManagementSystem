@@ -1,10 +1,11 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
-    public static List<String> transactionHistory;
+    public static List<String> transactionHistory = new ArrayList<>();
     public static void displayBankInfo(){
-        System.out.println("*".repeat(50));
+        System.out.println("\n" + "*".repeat(50));
         System.out.println("\n\nName: BJK BANK");
         System.out.println("Established: 2024");
         System.out.println("Services: Depositing money, withdrawing money, account opening");
