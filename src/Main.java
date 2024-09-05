@@ -26,8 +26,10 @@ public class Main {
                     Withdraw(newAccount);
                     break;
                 case 4:
+                    Bank.displayBankInfo();
                     break;
                 case 5:
+                    ViewTransaction();
                     break;
                 default:
                     System.out.println("\nInvalid entry. Please try again.");
@@ -61,5 +63,9 @@ public class Main {
 
         account.withdraw(withdraw);
     }
-
+    public static void ViewTransaction(){
+        for(String exp : Bank.transactionHistory){
+            System.out.println(exp);
+        }
+    }
 }
